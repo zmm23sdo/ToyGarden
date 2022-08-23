@@ -4,23 +4,22 @@ ToyGarden Admin：工作人员管理平台
 ToyGarden Web：客户购买平台
 
 
-### 提交**文件**
+### 项目结构
+```
+.
+├── API
+├── Config
+├── Makefile
+├── README.md
+├── Scene
+├── TestCase
+├── UI
+├── requirements.txt
+└── tree.text
 
-API：API接口
 
-UI：UI界面
+```
 
-Sence：业务场景
-
-Config：配置
-
-TestCase：测试用例
-
-Makefile：执行代码
-
-README：说明文档
-
-requirements:依赖
 
 
 ### 开启扫描
