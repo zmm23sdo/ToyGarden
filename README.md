@@ -6,9 +6,9 @@ ToyGarden Web：客户购买平台
 
 ### 提交**文件**
 
-Admin：API接口、UI界面
+API：API接口
 
-Web：API接口、UI界面
+UI：UI界面
 
 Sence：业务场景
 
