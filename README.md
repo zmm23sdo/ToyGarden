@@ -7,13 +7,21 @@ ToyGarden Web：客户购买平台
 ### 提交**文件**
 
 Admin：API接口、UI界面
+
 Web：API接口、UI界面
+
 Sence：业务场景
+
 Config：配置
+
 TestCase：测试用例
+
 Makefile：执行代码
+
 README：说明文档
+
 requirements:依赖
+
 
 ### 开启扫描
 
