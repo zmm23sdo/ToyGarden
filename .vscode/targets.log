@@ -10,7 +10,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Thu Sep  8 14:49:59 2022
+ 
+# Make data base, printed on Fri Sep  9 09:36:10 2022
 
 # Variables
 
@@ -19,23 +20,23 @@ make: *** No rule to make target `all'.  Stop.
 # automatic
 ?F = $(notdir $?)
 # environment
-GATEWAY_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/gateway.vmoptions
+GATEWAY_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/gateway.vmoptions
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-WEBSTORM_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/webstorm.vmoptions
+WEBSTORM_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/webstorm.vmoptions
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/zhangmingwei/Projects/ToyGarden
+CURDIR := /Users/michaelcheung/Project/ToyGarden
 # makefile
 SHELL = /bin/sh
 # environment
-APPCODE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/appcode.vmoptions
+APPCODE_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/appcode.vmoptions
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_translationsConfigFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/tcf.json","_cacheRoot":"/Users/zhangmingwei/Library/Application Support/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/zhangmingwei/Library/Application Support/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/784b0177c56c607789f9638da7b6bf3230d47a8c","_corruptedFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/cc0490d1397af23dc5bf44a96fe15dbb.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"a1516064f4f46f2a618c351c3fa99660.zh-cn","_translationsConfigFile":"/Users/michaelcheung/Library/Application Support/Code/clp/a1516064f4f46f2a618c351c3fa99660.zh-cn/tcf.json","_cacheRoot":"/Users/michaelcheung/Library/Application Support/Code/clp/a1516064f4f46f2a618c351c3fa99660.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/michaelcheung/Library/Application Support/Code/clp/a1516064f4f46f2a618c351c3fa99660.zh-cn/784b0177c56c607789f9638da7b6bf3230d47a8c","_corruptedFile":"/Users/michaelcheung/Library/Application Support/Code/clp/a1516064f4f46f2a618c351c3fa99660.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -43,48 +44,51 @@ MAKEFILE_LIST :=  Makefile
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-WEBIDE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/webide.vmoptions
+WEBIDE_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/webide.vmoptions
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+PATH = /usr/local/bin:/opt/anaconda3/condabin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin
 # environment
-PHPSTORM_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/phpstorm.vmoptions
+PHPSTORM_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/phpstorm.vmoptions
 # environment
-GOLAND_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/goland.vmoptions
+GOLAND_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/goland.vmoptions
+# environment
+LaunchInstanceID = BA750DEF-A7D0-4AE1-93C3-336918ADA680
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-JETBRAINSCLIENT_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/jetbrainsclient.vmoptions
+JETBRAINSCLIENT_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/jetbrainsclient.vmoptions
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-IDEA_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/idea.vmoptions
+IDEA_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/idea.vmoptions
 # environment
-DATASPELL_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/dataspell.vmoptions
+DATASPELL_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/dataspell.vmoptions
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.dQIMP02vvM/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Z3HJunXeYO/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-PWD = /Users/zhangmingwei/Projects/ToyGarden
+CONDA_EXE = /opt/anaconda3/bin/conda
 # environment
- 
-JETBRAINS_CLIENT_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/jetbrains_client.vmoptions
+PWD = /Users/michaelcheung/Project/ToyGarden
+# environment
+JETBRAINS_CLIENT_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/jetbrains_client.vmoptions
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /Users/zhangmingwei
+HOME = /Users/michaelcheung
 # environment
-RIDER_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/rider.vmoptions
+RIDER_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/rider.vmoptions
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/zhangmingwei/Library/Application Support/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
+VSCODE_CODE_CACHE_PATH = /Users/michaelcheung/Library/Application Support/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
 # environment
-LOGNAME = zhangmingwei
+LOGNAME = michaelcheung
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
@@ -102,21 +106,23 @@ SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
-USER = zhangmingwei
+USER = michaelcheung
 # makefile
 .DEFAULT_GOAL := pw
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
+# environment
+CONDA_SHLVL = 0
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/39/48g3pfjd4nsdkhxdrjq6ptrm0000gn/T/
+TMPDIR = /var/folders/kh/sg37g_qj6sv50lwh0vmj4frh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/zhangmingwei/Library/Application Support/Code/1.71.0-main.sock
+VSCODE_IPC_HOOK = /Users/michaelcheung/Library/Application Support/Code/1.71.0-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -126,19 +132,20 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.16308190.16308196
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.35862597.35862603
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-DATAGRIP_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/datagrip.vmoptions
+DATAGRIP_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/datagrip.vmoptions
 # automatic
 +F = $(notdir $+)
 # environment
-RUBYMINE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/rubymine.vmoptions
+RUBYMINE_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/rubymine.vmoptions
 # environment
-__CF_USER_TEXT_ENCODING = 0x1F5:0:0
+__CF_USER_TEXT_ENCODING = 0x1F5:0x19:0x34
 # environment
-PYCHARM_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/pycharm.vmoptions
+ 
+PYCHARM_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/pycharm.vmoptions
 # environment
 COMMAND_MODE = unix2003
 # default
@@ -147,22 +154,29 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /opt/anaconda3/bin/python
+# environment
+SECURITYSESSIONID = 186a5
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# default
-.INCLUDE_DIRS = /usr/local/include
+# environment
+_CE_M = 
 # environment
 MAKELEVEL := 0
 # environment
-CLION_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/clion.vmoptions
+CLION_VM_OPTIONS = /Users/michaelcheung/Desktop/ja-netfilter-all/vmoptions/clion.vmoptions
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2954
+VSCODE_PID = 446
+# environment
+_CE_CONDA = 
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=1/97=1%
+ 
+# Load=79/1024=8%, Rehash=0, Collisions=1/102=1%
 
 # Pattern-specific Variable Values
 
@@ -170,9 +184,9 @@ VSCODE_PID = 2954
 
 # Directories
 
-# . (device 16777223, inode 15256982): 15 files, no impossibilities.
+# . (device 16777233, inode 36793420): 13 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -180,7 +194,17 @@ VSCODE_PID = 2954
 
 # Files
 
-T:
+# Not a target:
+all:
+#  Command-line target.
+ 
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+t:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -188,22 +212,12 @@ T:
 	python3 -m pytest -s -v TestCase --tracing=retain-on-failure --screenshot=only-on-failure --maxfail=1
 	
 
-# Not a target:
-all:
-#  Command-line target.
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 pw:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 2):
-	python3 -m playwright codegen https://admin-tg-test.chunsutech.com/
- 
+	python3 -m playwright codegen https://admin-tg-dev.chunsutech.com/
 	
 
 # Not a target:
@@ -212,10 +226,18 @@ pw:
 #  Modification time never checked.
 #  File has not been updated.
 
+tree:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 9):
+	tree -I node_modules > tree.text
+	
+
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-09-08 11:47:27
+#  Last modified 2022-09-09 09:23:38
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -227,7 +249,7 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-dT:
+dt:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -235,8 +257,16 @@ dT:
 	PWDEBUG=1 python3 -m pytest -s -v TestCase
 	
 
+req:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 11):
+	pip freeze > requirements.txt
+	
+
 # files hash-table stats:
-# Load=7/1024=1%, Rehash=0, Collisions=0/19=0%
+# Load=9/1024=1%, Rehash=0, Collisions=0/21=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -248,6 +278,6 @@ dT:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Sep  8 14:49:59 2022
+# Finished Make data base on Fri Sep  9 09:36:10 2022
 
  

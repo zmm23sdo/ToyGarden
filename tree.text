@@ -1,12 +1,16 @@
 .
-├── API
-├── Config
 ├── Makefile
-├── Page
-│   └── admin_login.py
 ├── README.md
-├── Scene
 ├── TestCase
+│   ├── __pycache__
+│   │   └── test_admin.cpython-39-pytest-6.2.4.pyc
+│   └── test_admin.py
+├── UI
+│   ├── __pycache__
+│   │   └── admin_login.cpython-39.pyc
+│   ├── admin_login.py
+│   └── admin_product.py
+├── pic.jpeg
 ├── requirements.txt
 ├── tree.text
 └── venv
@@ -15,14 +19,17 @@
     │   ├── activate
     │   ├── activate.csh
     │   ├── activate.fish
+    │   ├── autopep8
     │   ├── easy_install
     │   ├── easy_install-3.8
+    │   ├── faker
     │   ├── normalizer
     │   ├── pip
     │   ├── pip3
     │   ├── pip3.8
     │   ├── playwright
     │   ├── py.test
+    │   ├── pycodestyle
     │   ├── pytest
     │   ├── python -> python3
     │   ├── python3 -> /Applications/Xcode.app/Contents/Developer/usr/bin/python3
@@ -35,6 +42,16 @@
     ├── lib
     │   └── python3.8
     │       └── site-packages
+    │           ├── Faker-14.2.0.dist-info
+    │           │   ├── INSTALLER
+    │           │   ├── LICENSE.txt
+    │           │   ├── METADATA
+    │           │   ├── RECORD
+    │           │   ├── REQUESTED
+    │           │   ├── WHEEL
+    │           │   ├── entry_points.txt
+    │           │   ├── top_level.txt
+    │           │   └── zip-safe
     │           ├── _pytest
     │           │   ├── __init__.py
     │           │   ├── _argcomplete.py
@@ -147,6 +164,17 @@
     │           │   ├── RECORD
     │           │   ├── WHEEL
     │           │   └── top_level.txt
+    │           ├── autopep8-1.7.0.dist-info
+    │           │   ├── AUTHORS.rst
+    │           │   ├── INSTALLER
+    │           │   ├── LICENSE
+    │           │   ├── METADATA
+    │           │   ├── RECORD
+    │           │   ├── REQUESTED
+    │           │   ├── WHEEL
+    │           │   ├── entry_points.txt
+    │           │   └── top_level.txt
+    │           ├── autopep8.py
     │           ├── certifi
     │           │   ├── __init__.py
     │           │   ├── __main__.py
@@ -184,7 +212,1199 @@
     │           │   ├── WHEEL
     │           │   ├── entry_points.txt
     │           │   └── top_level.txt
+    │           ├── dateutil
+    │           │   ├── __init__.py
+    │           │   ├── _common.py
+    │           │   ├── _version.py
+    │           │   ├── easter.py
+    │           │   ├── parser
+    │           │   │   ├── __init__.py
+    │           │   │   ├── _parser.py
+    │           │   │   └── isoparser.py
+    │           │   ├── relativedelta.py
+    │           │   ├── rrule.py
+    │           │   ├── tz
+    │           │   │   ├── __init__.py
+    │           │   │   ├── _common.py
+    │           │   │   ├── _factories.py
+    │           │   │   ├── tz.py
+    │           │   │   └── win.py
+    │           │   ├── tzwin.py
+    │           │   ├── utils.py
+    │           │   └── zoneinfo
+    │           │       ├── __init__.py
+    │           │       ├── dateutil-zoneinfo.tar.gz
+    │           │       └── rebuild.py
     │           ├── easy_install.py
+    │           ├── faker
+    │           │   ├── __init__.py
+    │           │   ├── __main__.py
+    │           │   ├── cli.py
+    │           │   ├── config.py
+    │           │   ├── contrib
+    │           │   │   ├── __init__.py
+    │           │   │   └── pytest
+    │           │   │       ├── __init__.py
+    │           │   │       └── plugin.py
+    │           │   ├── decode
+    │           │   │   ├── __init__.py
+    │           │   │   └── codes.py
+    │           │   ├── documentor.py
+    │           │   ├── exceptions.py
+    │           │   ├── factory.py
+    │           │   ├── generator.py
+    │           │   ├── providers
+    │           │   │   ├── __init__.py
+    │           │   │   ├── address
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_AU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_GB
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_NZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_MX
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── he_IL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hi_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hy_AM
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── id_ID
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ja_JP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ka_GE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ko_KR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ne_NP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_BE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sl_SI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sv_SE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ta_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── uk_UA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── zh_CN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_TW
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── automotive
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── ar_BH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ar_JO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ar_PS
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ar_SA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_GB
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_NZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── et_EE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── he_IL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── id_ID
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── lt_LT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sq_AL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sv_SE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tr_TR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── vi_VN
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── bank
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_GB
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_MX
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── tr_TR
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── barcode
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── en_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── ja_JP
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── color
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── ar_PS
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bg_BG
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── color.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── he_IL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hy_AM
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── uk_UA
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── company
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bg_BG
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_MX
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hy_AM
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── id_ID
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ja_JP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ko_KR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sl_SI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sv_SE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tr_TR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── zh_CN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_TW
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── credit_card
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── ru_RU
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── currency
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_AU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sv_SE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── tr_TR
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── date_time
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── ar_AA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ar_EG
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hi_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hy_AM
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── id_ID
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ko_KR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sl_SI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ta_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tr_TR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_CN
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── file
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   └── en_US
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── geo
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── tr_TR
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── internet
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── ar_AA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bg_BG
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bs_BA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_AU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_GB
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_NZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── id_ID
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ja_JP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ko_KR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sl_SI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sv_SE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tr_TR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── uk_UA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── zh_CN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_TW
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── isbn
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── isbn.py
+    │           │   │   │   └── rules.py
+    │           │   │   ├── job
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── ar_AA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bs_BA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_MX
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hy_AM
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ja_JP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ko_KR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tr_TR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── uk_UA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── zh_CN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_TW
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── lorem
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── ar_AA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── he_IL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hy_AM
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ja_JP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── la
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── zh_CN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_TW
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── misc
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── tl_PH
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── person
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── ar_AA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ar_PS
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ar_SA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bg_BG
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_GB
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_NZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_MX
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── et_EE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_QC
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ga_IE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── he_IL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hi_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hy_AM
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── id_ID
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ja_JP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ka_GE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ko_KR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── lt_LT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── lv_LV
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ne_NP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── or_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sl_SI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sv_SE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ta_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tr_TR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tw_GH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── uk_UA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── zh_CN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_TW
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── phone_number
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── ar_AE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ar_JO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ar_PS
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bg_BG
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bs_BA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── da_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_AU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_GB
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_NZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_MX
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fa_IR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── he_IL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hi_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hy_AM
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── id_ID
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ja_JP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ko_KR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── lt_LT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── lv_LV
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ne_NP
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_BE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sl_SI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sv_SE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ta_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tr_TR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tw_GH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── uk_UA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── zh_CN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_TW
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── profile
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   └── en_US
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── python
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   └── en_US
+    │           │   │   │       └── __init__.py
+    │           │   │   ├── ssn
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── az_AZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bg_BG
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── bn_BD
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── cs_CZ
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_AT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── de_DE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── dk_DK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_CY
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── el_GR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_GB
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_IN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── en_US
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_CO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_ES
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── es_MX
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── et_EE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fi_FI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fil_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_CH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── fr_FR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── he_IL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hr_HR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── hu_HU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── it_IT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ko_KR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── lb_LU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── lt_LT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── lv_LV
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── mt_MT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_BE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── nl_NL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── no_NO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pl_PL
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_BR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── pt_PT
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ro_RO
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── ru_RU
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sk_SK
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sl_SI
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── sv_SE
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── th_TH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tl_PH
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── tr_TR
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── uk_UA
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   ├── zh_CN
+    │           │   │   │   │   └── __init__.py
+    │           │   │   │   └── zh_TW
+    │           │   │   │       └── __init__.py
+    │           │   │   └── user_agent
+    │           │   │       ├── __init__.py
+    │           │   │       └── en_US
+    │           │   │           └── __init__.py
+    │           │   ├── proxy.py
+    │           │   ├── py.typed
+    │           │   ├── sphinx
+    │           │   │   ├── __init__.py
+    │           │   │   ├── autodoc.py
+    │           │   │   ├── docstring.py
+    │           │   │   ├── documentor.py
+    │           │   │   └── validator.py
+    │           │   ├── typing.py
+    │           │   └── utils
+    │           │       ├── __init__.py
+    │           │       ├── checksums.py
+    │           │       ├── datasets.py
+    │           │       ├── decorators.py
+    │           │       ├── distribution.py
+    │           │       ├── loading.py
+    │           │       └── text.py
     │           ├── greenlet
     │           │   ├── __init__.py
     │           │   ├── _greenlet.cpython-38-darwin.so
@@ -1353,6 +2573,15 @@
     │           │   ├── RECORD
     │           │   ├── WHEEL
     │           │   └── top_level.txt
+    │           ├── pycodestyle-2.9.1.dist-info
+    │           │   ├── INSTALLER
+    │           │   ├── LICENSE
+    │           │   ├── METADATA
+    │           │   ├── RECORD
+    │           │   ├── WHEEL
+    │           │   ├── entry_points.txt
+    │           │   └── top_level.txt
+    │           ├── pycodestyle.py
     │           ├── pyee
     │           │   ├── __init__.py
     │           │   ├── _asyncio.py
@@ -1424,6 +2653,14 @@
     │           │   ├── WHEEL
     │           │   ├── entry_points.txt
     │           │   └── top_level.txt
+    │           ├── python_dateutil-2.8.2.dist-info
+    │           │   ├── INSTALLER
+    │           │   ├── LICENSE
+    │           │   ├── METADATA
+    │           │   ├── RECORD
+    │           │   ├── WHEEL
+    │           │   ├── top_level.txt
+    │           │   └── zip-safe
     │           ├── python_slugify-6.1.2.dist-info
     │           │   ├── INSTALLER
     │           │   ├── LICENSE
@@ -1553,7 +2790,7 @@
     │           │   │   ├── install_egg_info.py
     │           │   │   ├── install_lib.py
     │           │   │   ├── install_scripts.py
-    │           │   │   ├── launcher manifest.xml
+    │           │   │   ├── launcher\ manifest.xml
     │           │   │   ├── py36compat.py
     │           │   │   ├── register.py
     │           │   │   ├── rotate.py
@@ -1588,7 +2825,7 @@
     │           │   ├── py33compat.py
     │           │   ├── py34compat.py
     │           │   ├── sandbox.py
-    │           │   ├── script (dev).tmpl
+    │           │   ├── script\ (dev).tmpl
     │           │   ├── script.tmpl
     │           │   ├── ssl_support.py
     │           │   ├── unicode_utils.py
@@ -1606,6 +2843,14 @@
     │           │   ├── entry_points.txt
     │           │   ├── top_level.txt
     │           │   └── zip-safe
+    │           ├── six-1.16.0.dist-info
+    │           │   ├── INSTALLER
+    │           │   ├── LICENSE
+    │           │   ├── METADATA
+    │           │   ├── RECORD
+    │           │   ├── WHEEL
+    │           │   └── top_level.txt
+    │           ├── six.py
     │           ├── slugify
     │           │   ├── __init__.py
     │           │   ├── __main__.py
@@ -1623,6 +2868,19 @@
     │           │   ├── RECORD
     │           │   ├── WHEEL
     │           │   ├── metadata.json
+    │           │   └── top_level.txt
+    │           ├── toml
+    │           │   ├── __init__.py
+    │           │   ├── decoder.py
+    │           │   ├── encoder.py
+    │           │   ├── ordered.py
+    │           │   └── tz.py
+    │           ├── toml-0.10.2.dist-info
+    │           │   ├── INSTALLER
+    │           │   ├── LICENSE
+    │           │   ├── METADATA
+    │           │   ├── RECORD
+    │           │   ├── WHEEL
     │           │   └── top_level.txt
     │           ├── tomli
     │           │   ├── __init__.py
@@ -1739,4 +2997,4 @@
     │               └── top_level.txt
     └── pyvenv.cfg
 
-196 directories, 1543 files
+778 directories, 2219 files
