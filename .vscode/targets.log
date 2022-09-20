@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Tue Sep 20 17:24:32 2022
+# Make data base, printed on Tue Sep 20 18:15:11 2022
 
 # Variables
 
@@ -32,7 +32,7 @@ SHELL = /bin/sh
 # environment
 APPCODE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/appcode.vmoptions
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"52a557de5c39607b04949a9e2e3aeee5.zh-cn","_translationsConfigFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/tcf.json","_cacheRoot":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/e7f30e38c5a4efafeec8ad52861eb772a9ee4dfb","_corruptedFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"52a557de5c39607b04949a9e2e3aeee5.zh-cn","_translationsConfigFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/tcf.json","_cacheRoot":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/74b1f979648cc44d385a2286793c226e611f59e7","_corruptedFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -78,7 +78,7 @@ RIDER_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/rider.vmoption
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/zhangmingwei/Library/Application Support/Code/CachedData/e7f30e38c5a4efafeec8ad52861eb772a9ee4dfb
+VSCODE_CODE_CACHE_PATH = /Users/zhangmingwei/Library/Application Support/Code/CachedData/74b1f979648cc44d385a2286793c226e611f59e7
 # environment
 LOGNAME = zhangmingwei
 # environment
@@ -112,7 +112,7 @@ TMPDIR = /var/folders/39/48g3pfjd4nsdkhxdrjq6ptrm0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/zhangmingwei/Library/Application Support/Code/1.71.1-main.sock
+VSCODE_IPC_HOOK = /Users/zhangmingwei/Library/Application Support/Code/1.71.2-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -122,7 +122,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.16886028.16886034
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.16894427.16894433
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -156,7 +156,7 @@ CLION_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/clion.vmoption
 # environment
 LANG = C
 # environment
-VSCODE_PID = 79086
+VSCODE_PID = 79769
 # variable set hash-table stats:
 # Load=73/1024=7%, Rehash=0, Collisions=1/97=1%
 
@@ -259,7 +259,7 @@ req:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Sep 20 17:24:32 2022
+# Finished Make data base on Tue Sep 20 18:15:11 2022
 
  
 make: *** No rule to make target `all'.  Stop.
