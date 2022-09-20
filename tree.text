@@ -1,6 +1,9 @@
 .
+├── API
+├── Config
 ├── Makefile
 ├── README.md
+├── Scene
 ├── TestCase
 │   ├── __pycache__
 │   │   └── test_admin.cpython-39-pytest-6.2.4.pyc
@@ -2790,7 +2793,7 @@
     │           │   │   ├── install_egg_info.py
     │           │   │   ├── install_lib.py
     │           │   │   ├── install_scripts.py
-    │           │   │   ├── launcher\ manifest.xml
+    │           │   │   ├── launcher manifest.xml
     │           │   │   ├── py36compat.py
     │           │   │   ├── register.py
     │           │   │   ├── rotate.py
@@ -2825,7 +2828,7 @@
     │           │   ├── py33compat.py
     │           │   ├── py34compat.py
     │           │   ├── sandbox.py
-    │           │   ├── script\ (dev).tmpl
+    │           │   ├── script (dev).tmpl
     │           │   ├── script.tmpl
     │           │   ├── ssl_support.py
     │           │   ├── unicode_utils.py
@@ -2997,4 +3000,4 @@
     │               └── top_level.txt
     └── pyvenv.cfg
 
-778 directories, 2219 files
+781 directories, 2219 files
