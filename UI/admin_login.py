@@ -12,7 +12,7 @@ logout_li = ".ant-dropdown-menu-item"
 
 
 def adminLogin(page, username, password):
-    # Go to https://admin-tg-test.chunsutech.com/user/login/
+    # Go to https://admin-tg-dev.chunsutech.com/user/login/
     page.goto(dev_url+path)
     # Fill #username
     page.locator(locater_username).fill(username)
@@ -20,12 +20,12 @@ def adminLogin(page, username, password):
     page.locator(locater_password).fill(password)
     # Click button:has-text("登 录")
     page.locator(button_in).click()
-    # assert page.url == "https://admin-tg-test.chunsutech.com/dashboard"
+    # assert page.url == "https://admin-tg-dev.chunsutech.com/dashboard"
     # Click .ant-message-notice-content
     page.locator(bubble).click()
 
 def adminLogout(page):
-    # Go to https://admin-tg-test.chunsutech.com/dashboard
+    # Go to https://admin-tg-dev.chunsutech.com/dashboard
     page.goto(dashboard_url)
     # Click span:has-text("Serati Ma") >> nth=0
     page.locator(header_span).click()
