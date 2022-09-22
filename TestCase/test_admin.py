@@ -7,7 +7,8 @@ from faker import Faker
 import datetime
 
 
-username = "mvdev"
+# username = "mvdev"
+username = "admin"
 password = "qwer@1234"
 
 fake = Faker()
@@ -31,7 +32,7 @@ pic_url ="/Users/zhangmingwei/Projects/ToyGarden/pic.jpeg"
 def test_admin(page:Page):
     admin_login.adminLogin(page, username, password)
     # Go to https://admin-tg-test.chunsutech.com/product/create/
-    page.goto("https://admin-tg-dev.chunsutech.com/product/create/")
+    page.goto("https://admin-tg-test.chunsutech.com/product/create/")
     # Click button:has-text("Enable Variations")
     page.locator(variation_span).click()
     # Click button:has-text("Add Options")

@@ -2,6 +2,7 @@
 
 
 product_url = "https://admin-tg-dev.chunsutech.com/product/list"
+test_product_url = "https://admin-tg-test.chunsutech.com/product/list"
 create_button = ".ant-btn.ant-btn-primary"
 productname_text = "#name"
 describe_text = "#describe"
@@ -97,6 +98,9 @@ discount_rate_text = "#discount_rate"
 enddate_select = "#end_date"
 startdate_span = "text=13"
 enddate_span = "text=14"
+related_button = "text=Related Products添加商品 >> button"
+upsells_button = "text=Up-Sells添加商品 >> button"
+crosssells_button = "text=Cross-sells添加商品 >> button"
 
 
 def adminCreateAdvanceProduct(page, productname, description, picname, price,
@@ -258,7 +262,14 @@ def adminCreateAdvanceProduct(page, productname, description, picname, price,
 
 #   Related Products, Up-Sells, Cross-sells
 #   Related Products 添加商品
-
+    # Click text=Related Products添加商品 >> button
+    page.locator(related_button).click()
 #   Up-Sells s添加商品
-
+    # Click text=Up-Sells添加商品 >> button
+    page.locator(upsells_button).click()
 #   Cross-sells 添加商品
+    # Click text=Cross-sells添加商品 >> button
+    page.locator(crosssells_button).click()
+
+    # Click button:has-text("Save and Publish")
+    page.locator(button_submit).click()

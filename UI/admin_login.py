@@ -6,14 +6,14 @@ locater_password = "#password"
 button_in = ".ant-btn.ant-btn-primary.ant-btn-lg"
 bubble = ".ant-message-notice-content"
 
-dashboard_url = "https://admin-tg-dev.chunsutech.com/dashboard"
+dashboard_url = "https://admin-tg-test.chunsutech.com/dashboard"
 header_span = ".ant-dropdown-trigger.action___LP4_P.account___6HXOq"
 logout_li = ".ant-dropdown-menu-item"
 
 
 def adminLogin(page, username, password):
     # Go to https://admin-tg-dev.chunsutech.com/user/login/
-    page.goto(dev_url+path)
+    page.goto(test_url+path)
     # Fill #username
     page.locator(locater_username).fill(username)
     # Fill input[type="password"]
