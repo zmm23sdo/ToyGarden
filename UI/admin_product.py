@@ -1,8 +1,8 @@
 
 
 
-product_url = "https://admin-tg-dev.chunsutech.com/product/list"
-test_product_url = "https://admin-tg-test.chunsutech.com/product/list"
+product_url = "https://admin-tg-test.chunsutech.com/product/list"
+
 create_button = ".ant-btn.ant-btn-primary"
 productname_text = "#name"
 describe_text = "#describe"
@@ -273,3 +273,18 @@ def adminCreateAdvanceProduct(page, productname, description, picname, price,
 
     # Click button:has-text("Save and Publish")
     page.locator(button_submit).click()
+
+
+search_text = ".ant-input-group-wrapper.ant-input-search"
+search_button = ".ant-input-group-addon"
+search_svg = ".anticon.anticon-reload"
+
+def searchProduct(page, productname):
+    # Go to https://admin-tg-test.chunsutech.com/product/list
+    page.goto(product_url)
+    # Fill [placeholder="选择属性项搜索，或者输入关键字识别搜索"]
+    page.locator(search_text).fill(productname)
+    # Click text=Add Product高级搜索 >> button >> nth=1
+    page.locator(search_button).click()
+    # Click [aria-label="reload"] svg
+    page.locator(search_svg).click()

@@ -1,5 +1,8 @@
-pw:
-	python3 -m playwright codegen https://admin-tg-dev.chunsutech.com/
+pwa:
+	python3 -m playwright codegen https://admin-tg-test.chunsutech.com/
+pwc:
+	python3 -m playwright codegen https://client-tg-test.chunsutech.com/
+
 
 t:
 	python3 -m pytest -s -v TestCase --tracing=retain-on-failure --screenshot=only-on-failure --maxfail=1
