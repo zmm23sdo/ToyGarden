@@ -1,3 +1,6 @@
+
+
+
 product_url = "https://admin-tg-dev.chunsutech.com/product/list"
 create_button = ".ant-btn.ant-btn-primary"
 productname_text = "#name"
@@ -78,13 +81,28 @@ sizeZ_text = "#sizeZ"
 spu_text = "#spu"
 addcategory_spn = ".addCategoriesBtn___1xYnW"
 
-
+category_select = "#categories"
+template_radio = "label:nth-child(4) > .ant-radio"
+template_select = "#template_id"
+template_id_list = "#template_id_list"
+createtemplate_button = ".groupCreateBtn___2qayg"
+oversell_button = "#up-sell"
+presell_button = "#pre-sell"
+shipday_text = "text=I need business days to ship >> input[role=\"spinbutton\"]"
+presell_radio = "text=全额预售I need business days to ship定期预售商品一旦开始进入定金周期,将不可取消定期预售设置,不可更改定金相关信息,知道尾款周期结束 >> input[type=\"radio\"]"
+startdate_select = "#start_date"
+startdate_button = "text=22"
+enddate_button = "text=25"
+discount_rate_text = "#discount_rate"
+enddate_select = "#end_date"
+startdate_span = "text=13"
+enddate_span = "text=14"
 
 
 def adminCreateAdvanceProduct(page, productname, description, picname, price,
                        stock, attributename, variation0, option0, option1, option2,
                        option3, variation1, optiona, variation2, optionb, weight, sku,
-                       barcode, sizeX, sizeY, sizeZ, spu, ):
+                       barcode, sizeX, sizeY, sizeZ, spu, transPrice, shipday, discount_rate):
     # Go to https://admin-tg-test.chunsutech.com/product/list
     page.goto(product_url)
     # Click button:has-text("Add Product")
@@ -187,3 +205,60 @@ def adminCreateAdvanceProduct(page, productname, description, picname, price,
 #   添加Category
     # Click button:has-text("Add New Categories")
     page.locator(addcategory_spn).click()
+#   选择Category
+    # Click text=Categories请选择 >> input[role="combobox"]
+    page.locator(category_select).click()
+    # Click div[role="listbox"]:has-text("暂无数据")
+    page.locator("div[role=\"listbox\"]:has-text(\"暂无数据\")").click()
+#   选择[快速发货]-[固定运费]
+    # Fill text=Unified The FreightRM >> [placeholder="请输入"]
+    page.locator(transPrice_text).fill(transPrice)
+#   选择[快递发货]-[运费模板]
+    # Click label:nth-child(4) > .ant-radio
+    page.locator(template_radio).click()
+    # Click .productGroupContainer___2Tclt > .ant-form-item > .ant-row > div:nth-child(2) > .ant-form-item-control-input > .ant-form-item-control-input-content > div > .ant-select > .ant-select-selector
+    page.locator(template_select).click()
+    # Click #template_id_list
+    page.locator(template_id_list).click()
+#   创建[运费模板]
+    page.locator(createtemplate_button).click()
+
+
+    # Click text=Place of shipment请选择 >> input[role="combobox"]
+    page.locator(location_select).click()
+    # Click .ant-select-item >> nth=0
+    page.locator(location_label).click()
+
+#   超售
+    # Click text=是否支持超售:开启后商品库存为0可继续下单,库存可为负 >> button[role="switch"]
+    page.locator(oversell_button).click()
+#   预售
+    # Click #pre-sell
+    page.locator(presell_button).click()
+#   全额预售
+    # Fill text=I need business days to ship >> input[role="spinbutton"]
+    page.locator(shipday_text).fill(shipday)
+#   定期预售
+    # Check text=全额预售I need business days to ship定期预售商品一旦开始进入定金周期,将不可取消定期预售设置,不可更改定金相关信息,知道尾款周期结束 >> input[type="radio"] >> nth=1
+    page.locator(presell_radio).nth(1).check()
+    # Click #start_date
+    page.locator(startdate_select).click()
+    # Click text=22 >> nth=1
+    page.locator(startdate_button).nth(1).click()
+    # Click text=25 >> nth=0
+    page.locator(enddate_button).first.click()
+    # Fill text=By percentage% OFF >> [placeholder="请输入"]
+    page.locator(discount_rate_text).fill(discount_rate)
+    # Click #end_date
+    page.locator(enddate_select).click()
+    # Click text=13 >> nth=2
+    page.locator(startdate_span).nth(2).click()
+    # Click text=14 >> nth=2
+    page.locator(enddate_span).nth(2).click()
+
+#   Related Products, Up-Sells, Cross-sells
+#   Related Products 添加商品
+
+#   Up-Sells s添加商品
+
+#   Cross-sells 添加商品
