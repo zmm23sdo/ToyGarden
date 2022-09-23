@@ -286,5 +286,7 @@ def searchProduct(page, productname):
     page.locator(search_text).fill(productname)
     # Click text=Add Product高级搜索 >> button >> nth=1
     page.locator(search_button).click()
+    ##
+    page.wait_for_timeout(10000)
     # Click [aria-label="reload"] svg
     page.locator(search_svg).click()
