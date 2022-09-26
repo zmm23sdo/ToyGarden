@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Tue Sep 20 18:15:11 2022
+# Make data base, printed on Mon Sep 26 10:34:43 2022
 
 # Variables
 
@@ -100,7 +100,7 @@ MAKE_VERSION := 3.81
 # environment
 USER = zhangmingwei
 # makefile
-.DEFAULT_GOAL := pw
+.DEFAULT_GOAL := pwa
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -166,15 +166,23 @@ VSCODE_PID = 79769
 
 # Directories
 
-# . (device 16777223, inode 15256982): 16 files, no impossibilities.
+# . (device 16777223, inode 15256982): 17 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+pwc:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 4):
+	python3 -m playwright codegen https://client-tg-test.chunsutech.com/
+	
 
 # Not a target:
 all:
@@ -189,16 +197,8 @@ t:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 5):
+#  commands to execute (from `Makefile', line 8):
 	python3 -m pytest -s -v TestCase --tracing=retain-on-failure --screenshot=only-on-failure --maxfail=1
-	
-
-pw:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 2):
-	python3 -m playwright codegen https://admin-tg-dev.chunsutech.com/
 	
 
 # Not a target:
@@ -211,18 +211,26 @@ tree:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 9):
+#  commands to execute (from `Makefile', line 12):
 	tree -I node_modules > tree.text
 	
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-09-09 09:53:24
+#  Last modified 2022-09-22 15:09:44
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+pwa:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 2):
+	python3 -m playwright codegen https://admin-tg-test.chunsutech.com/
+	
 
 # Not a target:
 .DEFAULT:
@@ -234,7 +242,7 @@ dt:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 7):
+#  commands to execute (from `Makefile', line 10):
 	PWDEBUG=1 python3 -m pytest -s -v TestCase
 	
 
@@ -242,12 +250,12 @@ req:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 11):
+#  commands to execute (from `Makefile', line 14):
 	pip3 freeze > requirements.txt
 	
 
 # files hash-table stats:
-# Load=9/1024=1%, Rehash=0, Collisions=0/21=0%
+# Load=10/1024=1%, Rehash=0, Collisions=0/22=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -259,7 +267,7 @@ req:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Sep 20 18:15:11 2022
+# Finished Make data base on Mon Sep 26 10:34:43 2022
 
  
 make: *** No rule to make target `all'.  Stop.

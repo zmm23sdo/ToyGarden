@@ -18,10 +18,10 @@ sec = datetime.datetime.now().strftime('%S')
 
 
 
-# def test_admin_login(page:Page):
-#     admin_login.adminLogin(page, username, password)
-#     content = page.text_content(".ant-message-notice-content")
-#     assert content == "登录成功！"
+def test_admin_login(page:Page):
+    admin_login.adminLogin(page, username, password)
+    content = page.text_content(".ant-message-notice-content")
+    assert content == "登录成功！"
 
 # variation_span = "button:has-text(\"Enable Variations\")"
 # variation0_text = "[placeholder=\"Enter Vairation Name\\,eg\\:colour\\,etc\\.\"]"
