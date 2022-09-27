@@ -5,8 +5,6 @@ sys.path.append(os.getcwd())
 import pytest
 from page_admin import login_page, product_page
 from faker import Faker
-import datetime
-import json
 
 params = [("admin","qwer@1234","登录成功！")]
 
@@ -97,4 +95,4 @@ class TestCase:
         pass
 
 if __name__ == '__main__':
-    pytest.main(["-vs"])
+    pytest.main(["cases/test_case.py","-vs"])

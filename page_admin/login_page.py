@@ -13,18 +13,58 @@ class LoginPage(base_page.BasePage):
 
     def login(self, username, password):
         self.visit(self.admin_url)
-
-        self.locator(self.locater_username).fill(username)
-        self.locator(self.locater_password).fill(password)
-
+        self.fill(self.locater_username, username)
+        self.fill(self.locater_password, password)
           # Click button:has-text("登 录")
-        self.locator(self.button_in).click()
+        self.click(self.button_in)
         # assert page.url == "https://admin-tg-dev.chunsutech.com/dashboard"
         # Click .ant-message-notice-content
-        self.locator(self.bubble).click()
-
+        self.click(self.bubble)
         tip = self.page.text_content(self.bubble)
-
         return tip
+    
+    error_user_text = "text=用户名是必填项！"
+    error_pwd_text = "text=密码是必填项！"
+    
+    def login_empty(self, username, password):
+        self.visit(self.admin_url)
+        self.fill(self.locater_username, username)
+        self.fill(self.locater_password, password)
+          # Click button:has-text("登 录")
+        self.click(self.button_in)
+        # Click text=用户名是必填项！
+        self.click(self.error_user_text)
+        # Click text=密码是必填项！
+        self.click(self.error_pwd_text)
+        tip_user = self.page.text_content(self.error_user_text)
+        tip_pwd = self.page.text_content(self.error_pwd_text)
+        return tip_user, tip_pwd
+        
+    def login_empty_username(self, username, password):
+        self.visit(self.admin_url)
+        self.fill(self.locater_username, username)
+        self.fill(self.locater_password, password)
+          # Click button:has-text("登 录")
+        self.click(self.button_in)
+        # Click text=用户名是必填项！
+        self.click(self.error_user_text)
+        # # Click text=密码是必填项！
+        # self.click(self.error_pwd_text)
+        tip_user = self.page.text_content(self.error_user_text)
+        # tip_pwd = self.page.text_content(self.error_pwd_text)
+        return tip_user
 
+    def login_empty_password(self, username, password):
+        self.visit(self.admin_url)
+        self.fill(self.locater_username, username)
+        self.fill(self.locater_password, password)
+          # Click button:has-text("登 录")
+        self.click(self.button_in)
+        # # Click text=用户名是必填项！
+        # self.click(self.error_user_text)
+        # Click text=密码是必填项！
+        self.click(self.error_pwd_text)
+        # tip_user = self.page.text_content(self.error_user_text)
+        tip_pwd = self.page.text_content(self.error_pwd_text)
+        return tip_pwd
 

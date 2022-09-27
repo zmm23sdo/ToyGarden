@@ -26,7 +26,8 @@ class ProductPage(base_page.BasePage):
         # Go to https://admin-tg-test.chunsutech.com/product/list
         self.visit(self.product_url)
         # Click button:has-text("Add Product")
-        self.locator(self.create_button).click()
+        # self.locator(self.create_button).click()
+        self.click(self.create_button)
         # Fill text=Product Name0 / 120 >> [placeholder="请输入"]
         self.locator(self.productname_text).fill(productname)
         # Upload BananaClientCode.txt
@@ -35,17 +36,23 @@ class ProductPage(base_page.BasePage):
         ##
         self.wait(10000)
         # Fill text=价格RM >> [placeholder="请输入"]
-        self.locator(self.price_text).fill(price)
+        # self.locator(self.price_text).fill(price)
+        self.fill(self.price_text, price)
         # Fill #stock
-        self.locator(self.stock_text).fill(stock)
+        # self.locator(self.stock_text).fill(stock)
+        self.fill(self.stock_text, stock)
         # Fill text=Unified The FreightRM >> [placeholder="请输入"]
-        self.locator(self.transPrice_text).fill(transPrice)
+        # self.locator(self.transPrice_text).fill(transPrice)
+        self.fill(self.transPrice_text, transPrice)
         # Click .ant-select.ant-select-in-form-item.ant-select-status-error .ant-select-selector
-        self.locator(self.location_select).click()
+        # self.locator(self.location_select).click()
+        self.click(self.location_select)
         # Click text=Selangor >> nth=1
-        self.locator(self.location_label).click()
+        # self.locator(self.location_label).click()
+        self.click(self.location_label)
         # Click button:has-text("Save and Publish")
-        self.locator(self.button_submit).click()
+        # self.locator(self.button_submit).click()
+        self.click(self.button_submit)
         # # Click .ant-message-notice-content
         # self.locator(self.bubble).click()
 

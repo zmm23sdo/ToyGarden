@@ -14,12 +14,16 @@ class BasePage:
         return self.page.locator(loc)
     # 输入
     def input(self, loc, txt):
-       self.locator(loc).set_input_files(txt)
-
+        self.locator(loc).set_input_files(txt)
+    # text键入
+    def fill(self, loc, txt):
+        self.locator(loc).fill(txt)
     # 点击
     def click(self, loc):
         self.locator(loc).click()
-
+    # # 定位文案
+    # def content(self, loc):
+    #     self.page.text_content(loc)
     # 等待
     def wait(self, time):
        self.page.wait_for_timeout(time)
