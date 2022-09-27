@@ -21,10 +21,10 @@ class BasePage:
         self.locator(loc).click()
 
     # 等待
-    # def wait(self, time):
-    #     sleep(time)
+    def wait(self, time):
+       self.page.wait_for_timeout(time)
 
     # 关闭
     def close(self):
-        self.driver.quit()
+        self.page.close()
 

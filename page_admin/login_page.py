@@ -1,7 +1,7 @@
 from base import base_page
 
 class LoginPage(base_page.BasePage):
-    url = "https://admin-tg-test.chunsutech.com/"
+    admin_url = "https://admin-tg-test.chunsutech.com/"
     locater_username = "#user_name"
     locater_password = "#password"
     button_in = ".ant-btn.ant-btn-primary.ant-btn-lg"
@@ -12,7 +12,7 @@ class LoginPage(base_page.BasePage):
         self.open()
 
     def login(self, username, password):
-        self.visit(self.url)
+        self.visit(self.admin_url)
 
         self.locator(self.locater_username).fill(username)
         self.locator(self.locater_password).fill(password)
