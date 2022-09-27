@@ -30,7 +30,8 @@ class ProductPage(base_page.BasePage):
         # Fill text=Product Name0 / 120 >> [placeholder="请输入"]
         self.locator(self.productname_text).fill(productname)
         # Upload BananaClientCode.txt
-        self.locator(self.pic_input).set_input_files(picname)
+        # self.locator(self.pic_input).set_input_files(picname)
+        self.input(self.pic_input, picname)
         ##
         self.wait(10000)
         # Fill text=价格RM >> [placeholder="请输入"]
