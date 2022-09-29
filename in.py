@@ -57,7 +57,7 @@ def createCategory(categoryname):
    
 
 
-list_Xlinex = getXlinex(offsetnumber = "", limitnumber = "1000")
+list_Xlinex = getXlinex(offsetnumber = "2000", limitnumber = "1000")
 for i in list_Xlinex:
    productname = i['itemName']
    categoryname = i['brand']
