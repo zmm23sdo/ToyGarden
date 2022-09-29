@@ -6,6 +6,9 @@ class LoginPage(base_page.BasePage):
     locater_password = "#password"
     button_in = ".ant-btn.ant-btn-primary.ant-btn-lg"
     bubble = ".ant-message-notice-content"
+    dashboard_url = "https://admin-tg-test.chunsutech.com/dashboard"
+    header_icon = ".ant-dropdown-trigger.action___LP4_P.account___6HXOq"
+    logout_button = ".ant-dropdown-menu-item"
 
     def __init__(self) -> None:
         super().__init__()
@@ -25,7 +28,7 @@ class LoginPage(base_page.BasePage):
     
     error_user_text = "text=用户名是必填项！"
     error_pwd_text = "text=密码是必填项！"
-    
+
     def login_empty(self, username, password):
         self.visit(self.admin_url)
         self.fill(self.locater_username, username)
@@ -68,3 +71,8 @@ class LoginPage(base_page.BasePage):
         tip_pwd = self.page.text_content(self.error_pwd_text)
         return tip_pwd
 
+    def loginout(self):
+        self.visit(self.dashboard_url)
+        self.click(self.header_icon)
+        self.click(self.logout_button)
+        # assert page.url == "https://admin-tg-test.chunsutech.com/user/login?redirect=%2Fdashboard"
