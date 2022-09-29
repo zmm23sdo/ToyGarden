@@ -2,8 +2,8 @@ import requests
 import json
 
 
-def getXlinex(limitnumber):
-    url_xlinex = "https://api.xilnex.com/logic/v2/items?offset=0&limit="+limitnumber
+def getXlinex(offsetnumber,limitnumber):
+    url_xlinex = "https://api.xilnex.com/logic/v2/items?offset="+offsetnumber+"limit="+limitnumber
 
     payload_xlinex={}
     headers_xlinex = {
@@ -57,7 +57,7 @@ def createCategory(categoryname):
    
 
 
-list_Xlinex = getXlinex(limitnumber = "4000")
+list_Xlinex = getXlinex(offsetnumber = "", limitnumber = "1000")
 for i in list_Xlinex:
    productname = i['itemName']
    categoryname = i['brand']
@@ -163,5 +163,5 @@ for i in list_Xlinex:
 
    response_createproduct = requests.request("POST", url, headers=headers, data=payload)
 
-   print(f'response_createproduct:{response_createproduct,response_createproduct.json()}')
+   print(f'response_createproduct:{response_createproduct,response_createproduct.json()},success!','\n','='*100)
 
