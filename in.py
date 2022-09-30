@@ -170,31 +170,31 @@ def list_create(offsetnumber,limitnumber):
       response_createproduct = requests.request("POST", url, headers=headers, data=payload)
 
       print(f'response_createproduct:{response_createproduct,response_createproduct.json()},success!','\n','='*100)
-      break
+      # break
 
 # list_create(offsetnumber = "0",limitnumber = "1")
 # print(f'调试','='*100)
 
 list_create(offsetnumber = "0",limitnumber = "1000")
-print("#"*100)
+print("0-1000","#"*100)
 pass
 list_create(offsetnumber = "1000",limitnumber = "1000")
-print("#"*100)
+print("1000-1000","#"*100)
 pass
 list_create(offsetnumber = "2000",limitnumber = "1000")
-print("#"*100)
+print("2000-1000","#"*100)
 pass
 list_create(offsetnumber = "3000",limitnumber = "1000")
-print("#"*100)
+print("3000-1000","#"*100)
 pass
 list_create(offsetnumber = "4000",limitnumber = "1000")
-print("#"*100)
+print("4000-1000","#"*100)
 pass
 list_create(offsetnumber = "5000",limitnumber = "1000")
-print("#"*100)
+print("5000-1000","#"*100)
 pass
 list_create(offsetnumber = "6000",limitnumber = "1000")
-print("#"*100)
+print("6000-1000","#"*100)
 
 
 
