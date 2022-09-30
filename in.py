@@ -3,7 +3,7 @@ import json
 
 
 def getXlinex(offsetnumber,limitnumber):
-    url_xlinex = "https://api.xilnex.com/logic/v2/items?offset="+offsetnumber+"limit="+limitnumber
+    url_xlinex = "https://api.xilnex.com/logic/v2/items?offset="+offsetnumber+"&limit="+limitnumber
 
     payload_xlinex={}
     headers_xlinex = {
@@ -49,14 +49,14 @@ def searchCategory(categoryname):
    return list_response_category_name
 
 
-def createCategory(categoryname):
+def createCategory(categoryname,parentId):
     url_category = "https://gateway-tg-test.chunsutech.com/admin/category"
     headers_category = {'X-Tester': '1', 'Content-Type': 'application/json'}
     payload_category = json.dumps({
             "spuNo": [],
             "name": categoryname,
             "enableCategory": False,
-            "parentId": 24,
+            "parentId": parentId,
             "pic": "http://dummyimage.com/400x400",
             "menuType": "Menu",
             "isMenu": False
@@ -74,10 +74,12 @@ def createCategory(categoryname):
 
 def list_create(offsetnumber,limitnumber):
    list_Xlinex = getXlinex(offsetnumber = offsetnumber, limitnumber = limitnumber)
+   count = 0
    for i in list_Xlinex:
       productname = i['itemName']
       categoryname = i['brand']
       skucode = i['itemCode']
+      count += 1
 
       print(f'productname:{productname}')
       print(f'categoryname:{categoryname}')
@@ -90,7 +92,7 @@ def list_create(offsetnumber,limitnumber):
       categroies_data = list_response_category_name['categories']
       # print(f'categroies_data:{categroies_data}')
       if categroies_data == []:
-         create_category = createCategory(categoryname)
+         create_category = createCategory(categoryname,24)
          print(f'create_category:{create_category,create_category.json()}')
          categories_id = str(create_category.json()['id'])
          print(f'categories_id:{categories_id}')
@@ -100,33 +102,33 @@ def list_create(offsetnumber,limitnumber):
 
       url = "https://gateway-tg-test.chunsutech.com/admin/product"
       payload = json.dumps({
-         "userId": "1",
-         "name": productname,
-         "preSaleEnd": {
-      "seconds": 20,
-      "nanos": 10
-   },
-         "preSaleRate": 57,
-         "overbook": False,
-         "balanceStart": {
-      "seconds": 20,
-      "nanos": 10
-   },
-            "pic": [],
-         "deliveryType": 1,
-         "upSellsIds": [
-            59
-         ],
-         "deliveryDay": 20,
-         "balanceEnd": {
-      "seconds": 20,
-      "nanos": 10
-   },
-         "location": "voluptate",
-         "preSaleStart": {
-      "seconds": 20,
-      "nanos": 10
-   },
+            "userId": "1",
+            "name": productname,
+            "preSaleEnd": {
+         "seconds": 20,
+         "nanos": 10
+      },
+            "preSaleRate": 57,
+            "overbook": False,
+            "balanceStart": {
+         "seconds": 20,
+         "nanos": 10
+      },
+               "pic": [],
+            "deliveryType": 1,
+            "upSellsIds": [
+               59
+            ],
+            "deliveryDay": 20,
+            "balanceEnd": {
+         "seconds": 20,
+         "nanos": 10
+      },
+            "location": "voluptate",
+            "preSaleStart": {
+         "seconds": 20,
+         "nanos": 10
+      },
          "preSaleAmount": 65,
          "sizeX": 64,
          "transPrice": 80,
@@ -168,33 +170,33 @@ def list_create(offsetnumber,limitnumber):
       }
 
       response_createproduct = requests.request("POST", url, headers=headers, data=payload)
-
+      print(f'Number={count}','@'*100)
       print(f'response_createproduct:{response_createproduct,response_createproduct.json()},success!','\n','='*100)
       # break
 
 # list_create(offsetnumber = "0",limitnumber = "1")
 # print(f'调试','='*100)
 
-list_create(offsetnumber = "0",limitnumber = "1000")
-print("0-1000","#"*100)
-pass
-list_create(offsetnumber = "1000",limitnumber = "1000")
-print("1000-1000","#"*100)
-pass
-list_create(offsetnumber = "2000",limitnumber = "1000")
-print("2000-1000","#"*100)
-pass
-list_create(offsetnumber = "3000",limitnumber = "1000")
-print("3000-1000","#"*100)
-pass
-list_create(offsetnumber = "4000",limitnumber = "1000")
-print("4000-1000","#"*100)
-pass
-list_create(offsetnumber = "5000",limitnumber = "1000")
-print("5000-1000","#"*100)
-pass
-list_create(offsetnumber = "6000",limitnumber = "1000")
-print("6000-1000","#"*100)
+# list_create(offsetnumber = "0",limitnumber = "1000")
+# print("0-1000","#"*100)
+# pass
+# list_create(offsetnumber = "1000",limitnumber = "1000")
+# print("1000-1000","#"*100)
+# pass
+# list_create(offsetnumber = "2000",limitnumber = "1000")
+# print("2000-1000","#"*100)
+# pass
+# list_create(offsetnumber = "3000",limitnumber = "1000")
+# print("3000-1000","#"*100)
+# pass
+# list_create(offsetnumber = "4000",limitnumber = "1000")
+# print("4000-1000","#"*100)
+# pass
+# list_create(offsetnumber = "5000",limitnumber = "1000")
+# print("5000-1000","#"*100)
+# pass
+# list_create(offsetnumber = "6000",limitnumber = "1000")
+# print("6000-1000","#"*100)
 
 
 
