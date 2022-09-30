@@ -33,6 +33,22 @@ def getCategories():
     list_response_categories = response_categories.json()['categories']
     return list_response_categories
 
+def searchCategory(categoryname):
+   url_category_name = "https://gateway-tg-test.chunsutech.com/admin/categories/name?name="+categoryname
+
+   payload_category_name={}
+   headers_category_name = {
+      'X-Tester': '1',
+      'X-Tenant-Type': 'admin',
+      'User-Agent': 'apifox/1.0.0 (https://www.apifox.cn)'
+   }
+
+   response_category_name = requests.request("GET", url_category_name, headers=headers_category_name, data=payload_category_name)
+   list_response_category_name = response_category_name.json()
+   # print(response_category_name.text)
+   return list_response_category_name
+
+
 def createCategory(categoryname):
     url_category = "https://gateway-tg-test.chunsutech.com/admin/category"
     headers_category = {'X-Tester': '1', 'Content-Type': 'application/json'}
@@ -66,32 +82,21 @@ def list_create(offsetnumber,limitnumber):
       print(f'productname:{productname}')
       print(f'categoryname:{categoryname}')
       print(f'skucode:{skucode}')
+   
+      #  Search categroy with categroyname
+      list_response_category_name = searchCategory(categoryname)
+      # print(f'list_response_category_name:{list_response_category_name}')
 
-   #  #  Category List 
-      response_categories = getCategories()
-      # print(f'response_categories:{response_categories}')
-   #  #  get Category_id & Category_name
-      list_categories = {}
-      for j in response_categories[0]['children']:
-         # print(j['name'])
-         # print(j['id'])
-         list_categories[j['name']]=j['id']
-      # print(f'list_categories:{list_categories}')
-   #  #  if else Category had been exited
-      for k in list_categories:
-         if str(k) == str(categoryname):
-            categories_id = list_categories[k]
-            print(f"categories_id:{categories_id}")
-            break
-         else:
-            create_category = createCategory(categoryname)
-            print(f'create_category:{create_category,create_category.json()}')
-            categories_id = str(create_category.json()['id'])
-            # response_categories = getCategories()
-            print(f'categories_id:{categories_id}')
-            break
-            # print("123")
-         
+      categroies_data = list_response_category_name['categories']
+      # print(f'categroies_data:{categroies_data}')
+      if categroies_data == []:
+         create_category = createCategory(categoryname)
+         print(f'create_category:{create_category,create_category.json()}')
+         categories_id = str(create_category.json()['id'])
+         print(f'categories_id:{categories_id}')
+      else:
+         categories_id = categroies_data[0]['id']
+         print(f'categories_id:{categories_id}')
 
       url = "https://gateway-tg-test.chunsutech.com/admin/product"
       payload = json.dumps({
@@ -165,16 +170,31 @@ def list_create(offsetnumber,limitnumber):
       response_createproduct = requests.request("POST", url, headers=headers, data=payload)
 
       print(f'response_createproduct:{response_createproduct,response_createproduct.json()},success!','\n','='*100)
+      break
+
+# list_create(offsetnumber = "0",limitnumber = "1")
+# print(f'调试','='*100)
 
 list_create(offsetnumber = "0",limitnumber = "1000")
+print("#"*100)
+pass
 list_create(offsetnumber = "1000",limitnumber = "1000")
+print("#"*100)
+pass
 list_create(offsetnumber = "2000",limitnumber = "1000")
+print("#"*100)
+pass
 list_create(offsetnumber = "3000",limitnumber = "1000")
+print("#"*100)
+pass
 list_create(offsetnumber = "4000",limitnumber = "1000")
+print("#"*100)
+pass
 list_create(offsetnumber = "5000",limitnumber = "1000")
+print("#"*100)
+pass
 list_create(offsetnumber = "6000",limitnumber = "1000")
-
-
+print("#"*100)
 
 
 
