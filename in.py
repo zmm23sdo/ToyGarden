@@ -170,7 +170,7 @@ def list_create(offsetnumber,limitnumber):
       }
 
       response_createproduct = requests.request("POST", url, headers=headers, data=payload)
-      print(f'Number={count}','@'*100)
+      print(f'Number={count}','\n','@'*100)
       print(f'response_createproduct:{response_createproduct,response_createproduct.json()},success!','\n','='*100)
       # break
 
