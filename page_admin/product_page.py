@@ -32,6 +32,9 @@ class ProductPage(base_page.BasePage):
     addoption_button = "fieldset>.ant-btn.ant-btn-default"
     pic_option = 'input[id^="testpic_"]'
     options_add_text = "[placeholder=\"Enter\\ Vairation\\ Name\\,eg\\:Red\\,etc\\.\"]"
+    price_box = ".variantInfo___1m5bJ>.ant-input-number-affix-wrapper>.ant-input-number>.ant-input-number-input-wrap>.ant-input-number-input"
+    
+
 
     def __init__(self, page) -> None:
         super().__init__()
@@ -76,7 +79,9 @@ class ProductPage(base_page.BasePage):
     def CreateAdvanceProdut(self, productname, describe, picname, picname1, picname2,
                             picname3, picname4, picname5, picname6, picname7, picname8,
                             picname9, attributes_name, variation_name, options_name,
-                            pic_url, option_name1, option_name2, option_name3):
+                            pic_url, option_name1, option_name2, option_name3, price,
+                            stock, weight, sku, barcode, sizeX, sizeY, sizeZ, spu
+                            ):
         # Go to https://admin-tg-test.chunsutech.com/product/list
         self.visit(self.product_url)
         # Click button:has-text("Add Product")
@@ -141,9 +146,31 @@ class ProductPage(base_page.BasePage):
         for testpic in content.element_handles():
             print(f'\ncontent={testpic.get_attribute("id")}')
             self.input("#"+testpic.get_attribute("id"), pic_url)
+        self.wait(10000)
         # Fill [placeholder="Enter\ Vairation\ Name\,eg\:Red\,etc\."] >> nth=1
         self.locator(self.options_add_text).nth(1).fill(option_name1)
         # Fill [placeholder="Enter\ Vairation\ Name\,eg\:Red\,etc\."] >> nth=2
         self.locator(self.options_add_text).nth(2).fill(option_name2)
         # Fill [placeholder="Enter\ Vairation\ Name\,eg\:Red\,etc\."] >> nth=3
         self.locator(self.options_add_text).nth(3).fill(option_name3)
+        self.wait(10000)
+        # Fill [placeholder="Price"]
+        self.fill(self.price_box, price)
+        # Fill [placeholder="Stock"] ".variantInfo___1m5bJ>.ant-input-number>.ant-input-number-input-wrap"
+        self.fill("[placeholder=\"Stock\"]", stock)
+         # Fill [placeholder="Weight"]
+        self.fill("[placeholder=\"Weight\"]", weight)
+        # Fill [placeholder="SKU"]
+        self.fill("[placeholder=\"SKU\"]", sku)
+        # Fill [placeholder="Bar\ Code"]
+        self.fill("[placeholder=\"Bar\\ Code\"]", barcode)
+        # Click button:has-text("Apply To All")
+        self.click("button:has-text(\"Apply To All\")")
+         # Fill text=尺寸cm >> [placeholder="请输入"]
+        self.fill("#sizeX", sizeX)
+        # Fill #sizeY
+        self.fill("#sizeY", sizeY)
+        # Fill #sizeZ
+        self.fill("#sizeZ", sizeZ)
+        # Fill #spu
+        self.fill("#spu", spu)
