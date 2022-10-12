@@ -1,6 +1,6 @@
-from base import base_page
+from base.base_page import BasePage
 
-class ProductPage(base_page.BasePage):
+class ProductPage(BasePage):
     
     product_url = "https://admin-tg-test.chunsutech.com/product/list"
     create_button = ".space___lok53>.ant-space-item>.ant-btn.ant-btn-primary"

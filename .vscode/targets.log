@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat Oct  8 08:35:49 2022
+# Make data base, printed on Mon Oct 10 16:34:06 2022
 
 # Variables
 
@@ -18,12 +18,8 @@ make: *** No rule to make target `all'.  Stop.
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-GATEWAY_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/gateway.vmoptions
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# environment
-WEBSTORM_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/webstorm.vmoptions
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -33,9 +29,7 @@ CURDIR := /Users/zhangmingwei/Projects/ToyGarden
 # makefile
 SHELL = /bin/sh
 # environment
-APPCODE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/appcode.vmoptions
-# environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"52a557de5c39607b04949a9e2e3aeee5.zh-cn","_translationsConfigFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/tcf.json","_cacheRoot":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/64bbfbf67ada9953918d72e1df2f4d8e537d340e","_corruptedFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/52a557de5c39607b04949a9e2e3aeee5.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"78c842aaea601021948244dfecdb49b7.zh-cn","_translationsConfigFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/78c842aaea601021948244dfecdb49b7.zh-cn/tcf.json","_cacheRoot":"/Users/zhangmingwei/Library/Application Support/Code/clp/78c842aaea601021948244dfecdb49b7.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/zhangmingwei/Library/Application Support/Code/clp/78c842aaea601021948244dfecdb49b7.zh-cn/64bbfbf67ada9953918d72e1df2f4d8e537d340e","_corruptedFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/78c842aaea601021948244dfecdb49b7.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -43,41 +37,27 @@ MAKEFILE_LIST :=  Makefile
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-WEBIDE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/webide.vmoptions
-# environment
 VSCODE_CWD = /
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 # environment
-PHPSTORM_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/phpstorm.vmoptions
-# environment
-GOLAND_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/goland.vmoptions
+LaunchInstanceID = A7153305-0219-460D-8777-AD42BCA37A8D
 # environment
 ELECTRON_RUN_AS_NODE = 1
-# environment
-JETBRAINSCLIENT_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/jetbrainsclient.vmoptions
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-IDEA_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/idea.vmoptions
-# environment
-DATASPELL_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/dataspell.vmoptions
-# environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.dpVIfOdQKB/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.X1G3tepzcW/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 PWD = /Users/zhangmingwei/Projects/ToyGarden
-# environment
-JETBRAINS_CLIENT_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/jetbrains_client.vmoptions
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /Users/zhangmingwei
-# environment
-RIDER_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/rider.vmoptions
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
@@ -96,6 +76,7 @@ XPC_FLAGS = 0x0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+ 
 # environment
 SHLVL = 1
 # default
@@ -128,16 +109,10 @@ MFLAGS = -Rrqp
 XPC_SERVICE_NAME = application.com.microsoft.VSCode.17356828.17356835
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# environment
-DATAGRIP_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/datagrip.vmoptions
 # automatic
 +F = $(notdir $+)
 # environment
-RUBYMINE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/rubymine.vmoptions
-# environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0:0
-# environment
-PYCHARM_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/pycharm.vmoptions
 # environment
 COMMAND_MODE = unix2003
 # default
@@ -146,6 +121,8 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a3
 # automatic
 ^F = $(notdir $^)
 # default
@@ -155,13 +132,11 @@ SUFFIXES :=
 # environment
 MAKELEVEL := 0
 # environment
-CLION_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/clion.vmoptions
-# environment
 LANG = C
 # environment
-VSCODE_PID = 1409
+VSCODE_PID = 446
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=1/97=1%
+# Load=60/1024=6%, Rehash=0, Collisions=1/84=1%
 
 # Pattern-specific Variable Values
 
@@ -247,6 +222,7 @@ dt:
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 10):
 	PWDEBUG=1 python3 -m pytest -s -v TestCase
+ 
 	
 
 req:
@@ -270,6 +246,6 @@ req:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Oct  8 08:35:49 2022
+# Finished Make data base on Mon Oct 10 16:34:06 2022
 
  

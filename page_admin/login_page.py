@@ -1,6 +1,6 @@
-from base import base_page
+from base.base_page import BasePage
 
-class LoginPage(base_page.BasePage):
+class LoginPage(BasePage):
     admin_url = "https://admin-tg-test.chunsutech.com/"
     locater_username = "#user_name"
     locater_password = "#password"
