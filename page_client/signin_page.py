@@ -134,8 +134,28 @@ class LoginPage(BasePage):
         tip = self.page.text_content(self.vcode_err_tip)
         return tip
 
+    lwp_button = "text=Login with password"
+    password_tip = "text=This is a required field."
+
     def signin_password_empty(self, phone):
+        # Go to https://client-tg-test.chunsutech.com/
+        self.visit(self.client_url)
+        # Click button:has-text("Account")
+        self.click(self.account_button)
+        # Click text=Sign In >> nth=3
+        self.locator(self.signin_select).nth(3).click()
+        self.page.wait_for_url(self.signin_url)
+        # Fill text=PhonePlease fill in valid phone number. >> input[type="text"]
 
-
+        # Click text=Login with password
+        self.click(self.lwp_button)
+        # Fill text=PhonePlease fill in valid phone number. >> input[type="text"]
+        self.fill(self.phone_text, phone)
+        # Click text=GET
+        self.click(self.get_button)
+        # Click text=PhoneThis is a required field. >> div
+        self.click(self.password_tip)
+        tip = self.page.text_content(self.password_tip)
+        return tip
 
 
