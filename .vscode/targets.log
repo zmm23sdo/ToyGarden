@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Mon Oct 17 17:23:01 2022
+# Make data base, printed on Mon Oct 17 18:03:23 2022
 
 # Variables
 
@@ -15,8 +15,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 GATEWAY_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/gateway.vmoptions
 # automatic
@@ -44,7 +42,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 WEBIDE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/webide.vmoptions
 # environment
-VSCODE_CWD = /Users/zhangmingwei/Projects/ToyGarden
+VSCODE_CWD = /
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 # environment
@@ -80,8 +78,6 @@ RIDER_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/rider.vmoption
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CLI = 1
-# environment
 VSCODE_CODE_CACHE_PATH = /Users/zhangmingwei/Library/Application Support/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
 # environment
 LOGNAME = zhangmingwei
@@ -98,21 +94,17 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 3
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = zhangmingwei
 # makefile
 .DEFAULT_GOAL := pwa
-# environment
-TERM_SESSION_ID = 7BCF92EE-DA7B-4C0E-B08A-CB679FCA0B93
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
-# environment
-TERM_PROGRAM = Apple_Terminal
 # default
 .VARIABLES := 
 # environment
@@ -130,9 +122,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 445
-# environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.17632519.17632525.04AAE189-2639-4011-BBE5-28F4B5BB39CB
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.17632519.17632525
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -166,11 +156,9 @@ CLION_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/clion.vmoption
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 32130
+VSCODE_PID = 33264
 # variable set hash-table stats:
-# Load=79/1024=8%, Rehash=0, Collisions=1/103=1%
+# Load=73/1024=7%, Rehash=0, Collisions=1/97=1%
 
 # Pattern-specific Variable Values
 
@@ -279,7 +267,7 @@ req:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Oct 17 17:23:01 2022
+# Finished Make data base on Mon Oct 17 18:03:23 2022
 
  
 make: *** No rule to make target `all'.  Stop.

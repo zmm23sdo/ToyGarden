@@ -30,8 +30,6 @@ class LoginPage(BasePage):
         tip = self.page.text_content( ".ant-message-notice-content")
         return tip
     
-    
-
     def login_empty(self, username, password):
         self.visit(self.admin_url)
         self.fill("#user_name", username)
