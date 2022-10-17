@@ -81,6 +81,35 @@ class SpecificationPage(BasePage):
         # Click .ant-message-notice-content
         self.click(self.bubble_button)
 
+    edit_button = "tr:nth-child(1) > td.ant-table-cell.ant-table-cell-fix-right.ant-table-cell-fix-right-first > div > div:nth-child(1) > button"
+
+
+    def EditSpecification(self, new_speciication_name, new_options):
+        # Go to https://admin-tg-test.chunsutech.com/product/specification
+        self.visit(self.specification_url)
+        # Click text=Specification name Radio02022-10-14 22:48:32编 辑设为默认删 除 >> button >> nth=0
+        self.click(self.edit_button)
+        # Fill [placeholder="请输入"]
+        self.fill(self.specification_name_text, new_speciication_name)
+        # Click .ant-select-selector
+        self.click(self.specType_selector)
+        # Click text=RadioCheck >> div >> nth=0
+        self.click(self.specType_list_0)
+        # Fill text=OptionsAdd Options >> input[type="text"]
+        self.fill(self.options_text, new_options)
+        self.click(self.submit_button)
+
+    set_default = "tr:nth-child(1) > td.ant-table-cell.ant-table-cell-fix-right.ant-table-cell-fix-right-first > div > div:nth-child(3) > button"
+
+    def SetDefaultSpecification(self):
+        # Click text=123 Check02022-10-14 23:25:52编 辑设为默认删 除 >> button >> nth=2
+        self.click(self.set_default)
+
+    delete_button = "tr:nth-child(1) > td.ant-table-cell.ant-table-cell-fix-right.ant-table-cell-fix-right-first > div > div:nth-child(5) > button"
+
+    def DeleteSpecification(self):
+         # Click text=Specification name Radio02022-10-14 22:48:40编 辑设为默认删 除 >> button >> nth=2
+        self.click(self.delete_button)
 
 
 
