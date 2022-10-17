@@ -105,6 +105,15 @@ class ShopPage(BasePage):
         # Click button:has-text("Confirm")
         self.click(self.delete_confirm_button)
 
+    # carouse_
+
+    def DecorationCarousel(self, ):
+        # Go to https://admin-tg-test.chunsutech.com/shop/decoration/
+        self.visit(self.shop_address_url)
+        # Click text=carousel
+        # page.locator("text=carousel").click()
+
+
 
 
 

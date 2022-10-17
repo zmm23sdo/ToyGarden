@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Fri Oct 14 13:48:16 2022
+# Make data base, printed on Mon Oct 17 17:23:01 2022
 
 # Variables
 
@@ -18,6 +15,8 @@ make: *** No rule to make target `all'.  Stop.
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 GATEWAY_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/gateway.vmoptions
 # automatic
@@ -35,7 +34,7 @@ SHELL = /bin/sh
 # environment
 APPCODE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/appcode.vmoptions
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"d12f895d31d9f9b0d093ad4fb7402f51.zh-cn","_translationsConfigFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/d12f895d31d9f9b0d093ad4fb7402f51.zh-cn/tcf.json","_cacheRoot":"/Users/zhangmingwei/Library/Application Support/Code/clp/d12f895d31d9f9b0d093ad4fb7402f51.zh-cn","_resolvedLanguagePackCoreLocation":"/Users/zhangmingwei/Library/Application Support/Code/clp/d12f895d31d9f9b0d093ad4fb7402f51.zh-cn/d045a5eda657f4d7b676dedbfa7aab8207f8a075","_corruptedFile":"/Users/zhangmingwei/Library/Application Support/Code/clp/d12f895d31d9f9b0d093ad4fb7402f51.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -45,7 +44,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 WEBIDE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/webide.vmoptions
 # environment
-VSCODE_CWD = /
+VSCODE_CWD = /Users/zhangmingwei/Projects/ToyGarden
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 # environment
@@ -81,6 +80,8 @@ RIDER_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/rider.vmoption
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
+VSCODE_CLI = 1
+# environment
 VSCODE_CODE_CACHE_PATH = /Users/zhangmingwei/Library/Application Support/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
 # environment
 LOGNAME = zhangmingwei
@@ -97,17 +98,21 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
+SHLVL = 3
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = zhangmingwei
 # makefile
 .DEFAULT_GOAL := pwa
+# environment
+TERM_SESSION_ID = 7BCF92EE-DA7B-4C0E-B08A-CB679FCA0B93
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# environment
+TERM_PROGRAM = Apple_Terminal
 # default
 .VARIABLES := 
 # environment
@@ -125,7 +130,9 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.17632519.17632525
+TERM_PROGRAM_VERSION = 445
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.17632519.17632525.04AAE189-2639-4011-BBE5-28F4B5BB39CB
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -137,7 +144,6 @@ RUBYMINE_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/rubymine.vm
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0:0
 # environment
- 
 PYCHARM_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/pycharm.vmoptions
 # environment
 COMMAND_MODE = unix2003
@@ -160,9 +166,11 @@ CLION_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/clion.vmoption
 # environment
 LANG = C
 # environment
-VSCODE_PID = 19806
+TERM = xterm-256color
+# environment
+VSCODE_PID = 32130
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=1/97=1%
+# Load=79/1024=8%, Rehash=0, Collisions=1/103=1%
 
 # Pattern-specific Variable Values
 
@@ -170,9 +178,9 @@ VSCODE_PID = 19806
 
 # Directories
 
-# . (device 16777220, inode 15256982): 20 files, no impossibilities.
+# . (device 16777220, inode 15256982): 17 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -271,6 +279,8 @@ req:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Oct 14 13:48:16 2022
+# Finished Make data base on Mon Oct 17 17:23:01 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
