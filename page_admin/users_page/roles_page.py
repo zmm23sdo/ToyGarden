@@ -1,6 +1,6 @@
 from base.base_page import BasePage
 
-class RolePage(BasePage):
+class RolesPage(BasePage):
 
     def __init__(self, page) -> None:
         super().__init__()

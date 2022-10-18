@@ -1,9 +1,11 @@
 import os
 import sys
+
+from page_admin.product_page import myproduct_page
 sys.path.append(os.getcwd())
 
 import pytest
-from page_admin import login_page, product_page
+from page_admin import login_page
 from faker import Faker
 
 faker = Faker()
@@ -36,7 +38,7 @@ class TestProduct:
         )
         ]
         for data in expect:
-            pw = product_page.ProductPage(login)
+            pw = myproduct_page.ProductPage(login)
             pw.CreateBasicProduct(
                 data[0],
                 data[1],

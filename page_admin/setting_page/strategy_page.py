@@ -40,4 +40,3 @@ class StrategyPage(BasePage):
         self.locator(self.comnfirm_button).first.click()
 
 
-

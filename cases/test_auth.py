@@ -1,9 +1,11 @@
 import os
 import sys
+
+from page_admin.product_page import myproduct_page
 sys.path.append(os.getcwd())
 
 import pytest
-from page_admin import login_page, product_page
+from page_admin import login_page
 from faker import Faker
 
 class TestAdminLogin:

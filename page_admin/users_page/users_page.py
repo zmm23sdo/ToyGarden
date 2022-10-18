@@ -1,6 +1,6 @@
 from base.base_page import BasePage
 
-class UserPage(BasePage):
+class UsersPage(BasePage):
 
     def __init__(self, page) -> None:
         super().__init__()
