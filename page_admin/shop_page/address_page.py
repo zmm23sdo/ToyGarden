@@ -7,7 +7,7 @@ class ShopAddressPage(BasePage):
         self.page = page
 
     shop_address_url = "https://admin-tg-test.chunsutech.com/shop/address"
-    shop_decoration_url = "https://admin-tg-test.chunsutech.com/shop/decoration"
+    # shop_decoration_url = "https://admin-tg-test.chunsutech.com/shop/decoration"
     # create_address_button = "button:has-text(\"Add Address\")"
     # phoneNumber_text = "#phoneNumber"
     # firstName_text = "#firstName"

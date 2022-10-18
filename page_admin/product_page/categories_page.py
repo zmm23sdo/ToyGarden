@@ -45,7 +45,7 @@ class CategoriesPage(BasePage):
 
     # add_sub_button = "button:has-text(\"Add Subcategory\")"
 
-    def CreateSubcategory(self, ):
+    def CreateSubcategory(self):
         # Go to https://admin-tg-test.chunsutech.com/product/categories/
         self.visit(self.categories_url)
         # Click span:has-text("123") >> nth=0
