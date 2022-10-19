@@ -39,10 +39,11 @@ class CustomerPage(BasePage):
         self.visit(self.customer_url)
         # Fill text=Add CustomerIDCustomer NameNamePhone NumberEmailTypeStateOperation暂无数据 >> [placeholder="请输入"]
         self.fill("#search", search_data)
-        ##########################
+###################################################################
         # Click button >> nth=1
         self.click(".ant-input-group-addon")
         # Click [aria-label="reload"] svg
         self.click(".anticon.anticon-reload")
-        ##########################
+###################################################################
+
         
