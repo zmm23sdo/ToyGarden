@@ -74,6 +74,31 @@ class ShipmentTemplatePage(BasePage):
         return tip
 ####################################################################
 
+    def EditShippingTemplate(self, templatename, weight, freight,  continuation, renewal):
+        # self.visit(self.template_url)
+        # Click button:has-text("Edit") >> nth=0
+        self.locator("button:has-text(\"Edit\")").first.click()
+
+    def DeleteShippingTemplate(self, templatename, weight, freight,  continuation, renewal):
+        # self.visit(self.template_url)
+        # Click button:has-text("Delete") >> nth=0
+        self.locator("button:has-text(\"Delete\")").first.click()
+    
+    def ModifySetting(self):
+        # Click text=按商品累加运费
+        # self.click("text=按商品累加运费")
+        # Click text=组合运费
+        self.click("text=组合运费")
+        # Click button:has-text("Confirm")
+        self.click("button:has-text(\"Confirm\")")
+###################################################################
+        self.click(".ant-message-notice-content")
+        tip = self.page.text_content( ".ant-message-notice-content")
+        return tip
+####################################################################
+
+
+
 
 
 
