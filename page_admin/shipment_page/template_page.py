@@ -97,6 +97,30 @@ class ShipmentTemplatePage(BasePage):
         return tip
 ####################################################################
 
+    def SearchShippingTemplate(self, search_data):
+        self.visit(self.template_url)
+        # Fill [placeholder="选择属性项搜索，或者输入关键字识别搜索"]
+        self.fill(".ant-input-search", search_data)
+
+
+    def AddPickup(self):
+        self.visit(self.template_url)
+        # Click text=上门自提
+        self.click("text=上门自提")
+        # Click button:has-text("添加自提点")
+        self.click("button:has-text(\"添加自提点\")")
+
+    def SearchPickup(self, search_data):
+        self.visit(self.template_url)
+        # Click text=上门自提
+        self.click("text=上门自提")
+        # Fill [placeholder="选择属性项搜索，或者输入关键字识别搜索"]
+        self.fill(".ant-input-search", search_data)
+
+
+
+
+
 
 
 

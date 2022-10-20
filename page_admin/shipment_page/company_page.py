@@ -51,5 +51,3 @@ class ShipmentCompanyPage(BasePage):
         tip = self.page.text_content( ".ant-message-notice-content")
         return tip
 ####################################################################
-
-

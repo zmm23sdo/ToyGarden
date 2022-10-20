@@ -25,12 +25,12 @@ class SubscriptionPage(BasePage):
         self.visit(self.subscription_url)
         # Fill text=Add Subscription EmailExport >> [placeholder="请输入"]
         self.fill("#search", search_data)
-        ##########################
+####################################################
         # Click button >> nth=1
         self.click(".ant-input-group-addon")
         # Click [aria-label="reload"] svg
         self.click(".anticon.anticon-reload")
-        ##########################
+####################################################
 
     def SubscriptSubscription(self):
         # Click button:has-text("Subscript") >> nth=1
