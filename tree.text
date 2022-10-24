@@ -1,20 +1,54 @@
 .
-├── API
-├── Config
 ├── Makefile
 ├── README.md
-├── Scene
-├── TestCase
-│   ├── __pycache__
-│   │   └── test_admin.cpython-39-pytest-6.2.4.pyc
-│   └── test_admin.py
-├── UI
-│   ├── __pycache__
-│   │   └── admin_login.cpython-39.pyc
-│   ├── admin_login.py
-│   └── admin_product.py
+├── api
+│   └── in.py
+├── base
+│   ├── __init__.py
+│   └── base_page.py
+├── cases
+│   ├── test_auth.py
+│   ├── test_case.py
+│   └── test_product.py
+├── page_admin
+│   ├── customer_page
+│   │   ├── mycustomer_page.py
+│   │   └── subscription_page.py
+│   ├── dashboard_page.py
+│   ├── finance_page
+│   │   ├── financeoverview_page.py
+│   │   ├── receive_page.py
+│   │   └── topay_page.py
+│   ├── login_page.py
+│   ├── market_page
+│   │   └── tools_page
+│   │       └── vouchers_page.py
+│   ├── order_page
+│   │   ├── myorder_page.py
+│   │   ├── returnrefund_page.py
+│   │   └── setting_page.py
+│   ├── product_page
+│   │   ├── categories_page.py
+│   │   ├── myproduct_page.py
+│   │   └── specification_page.py
+│   ├── setting_page
+│   │   └── strategy_page.py
+│   ├── shipment_page
+│   │   ├── company_page.py
+│   │   └── template_page.py
+│   ├── shop_page
+│   │   ├── address_page.py
+│   │   └── decoration_page.py
+│   ├── system_page
+│   │   └── materialcenter_page.py
+│   └── users_page
+│       ├── roles_page.py
+│       └── users_page.py
+├── page_client
+│   └── signin_page.py
 ├── pic.jpeg
 ├── requirements.txt
+├── run.py
 ├── tree.text
 └── venv
     ├── bin
@@ -46,6 +80,16 @@
     │   └── python3.8
     │       └── site-packages
     │           ├── Faker-14.2.0.dist-info
+    │           │   ├── INSTALLER
+    │           │   ├── LICENSE.txt
+    │           │   ├── METADATA
+    │           │   ├── RECORD
+    │           │   ├── REQUESTED
+    │           │   ├── WHEEL
+    │           │   ├── entry_points.txt
+    │           │   ├── top_level.txt
+    │           │   └── zip-safe
+    │           ├── Faker-15.0.0.dist-info
     │           │   ├── INSTALLER
     │           │   ├── LICENSE.txt
     │           │   ├── METADATA
@@ -178,6 +222,8 @@
     │           │   ├── entry_points.txt
     │           │   └── top_level.txt
     │           ├── autopep8.py
+    │           ├── bin
+    │           │   └── faker
     │           ├── certifi
     │           │   ├── __init__.py
     │           │   ├── __main__.py
@@ -2643,6 +2689,15 @@
     │           │   ├── RECORD
     │           │   ├── WHEEL
     │           │   └── entry_points.txt
+    │           ├── pytest_dependency-0.5.1-py3.8.egg-info
+    │           │   ├── PKG-INFO
+    │           │   ├── SOURCES.txt
+    │           │   ├── dependency_links.txt
+    │           │   ├── entry_points.txt
+    │           │   ├── installed-files.txt
+    │           │   ├── requires.txt
+    │           │   └── top_level.txt
+    │           ├── pytest_dependency.py
     │           ├── pytest_playwright
     │           │   ├── __init__.py
     │           │   ├── _repo_version.py
@@ -3000,4 +3055,4 @@
     │               └── top_level.txt
     └── pyvenv.cfg
 
-781 directories, 2219 files
+793 directories, 2262 files
