@@ -1,6 +1,9 @@
-### 架构介绍
+# ToyGarden
+
+## 介绍
 
 ToyGarden Admin：工作人员管理平台
+
 ToyGarden Web：客户购买平台
 
 ### 项目结构
@@ -18,7 +21,9 @@ base_page.py    封装的公用方法
 ### case文件夹
 
 test_auth.py    Admin登录页面测试用例
+
 test_case.py    调试时用的case用例，用例模板
+
 test_product.py Admin商品页面测试用例
 
 ### page_admin文件夹
@@ -32,6 +37,7 @@ test_product.py Admin商品页面测试用例
 ### 其他
 
 Makefile    快捷执行
+
 pic.jpeg    测试用的图片
 
 ### run.py
