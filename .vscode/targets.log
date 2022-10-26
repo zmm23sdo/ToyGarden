@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Mon Oct 24 09:54:27 2022
+# Make data base, printed on Wed Oct 26 16:26:03 2022
 
 # Variables
 
@@ -60,7 +60,7 @@ IDEA_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/idea.vmoptions
 # environment
 DATASPELL_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/dataspell.vmoptions
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.q9s6evmLQI/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.EcL79roiLr/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -156,7 +156,7 @@ CLION_VM_OPTIONS = /Users/zhangmingwei/ja-netfilter-all/vmoptions/clion.vmoption
 # environment
 LANG = C
 # environment
-VSCODE_PID = 47702
+VSCODE_PID = 2742
 # variable set hash-table stats:
 # Load=73/1024=7%, Rehash=0, Collisions=1/97=1%
 
@@ -166,7 +166,7 @@ VSCODE_PID = 47702
 
 # Directories
 
-# . (device 16777222, inode 15256982): 17 files, no impossibilities.
+# . (device 16777220, inode 15256982): 17 files, no impossibilities.
 
 # 17 files, no impossibilities in 1 directories.
 
@@ -267,7 +267,7 @@ req:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Oct 24 09:54:27 2022
+# Finished Make data base on Wed Oct 26 16:26:03 2022
 
  
 make: *** No rule to make target `all'.  Stop.
