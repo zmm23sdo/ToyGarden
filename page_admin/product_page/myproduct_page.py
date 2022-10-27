@@ -50,10 +50,21 @@ class ProductPage(BasePage):
         # Fill text=Product Name0 / 120 >> [placeholder="请输入"]
         self.locator("#name").fill(productname)
         # Upload BananaClientCode.txt
-        # self.locator("#pic").set_input_files(picname)
-        self.input("#pic", picname)
+        # self.input("span[role=\"button\"]:has-text(\"Upload\")",picname)
+        # Click span[role="button"]:has-text("Upload")
+        self.click("span[role=\"button\"]:has-text(\"Upload\")")
+        # Click text=本地上传
+        self.click("text=本地上传")
         ##
+        # self.wait(10000)
+        # self.locator("#pic").set_input_files(picname)
+        # self.input(".ant-upload.ant-upload-btn", picname)
+        self.input(".ant-upload.ant-upload-btn>input", picname)
         self.wait(10000)
+        # Click button:has-text("确 定")
+        self.click("button:has-text(\"确 定\")")
+        # ##
+        # self.wait(10000)
         # Fill text=价格RM >> [placeholder="请输入"]
         # self.locator("#price").fill(price)
         self.fill("#price", price)

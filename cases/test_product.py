@@ -9,13 +9,13 @@ from page_admin import login_page
 from faker import Faker
 
 faker = Faker()
-params = [("admin","qwer@1234","登录成功！")]
+params = [("zmwtest","qwer@1234","登录成功！")]
 
 @pytest.fixture(scope="module")
 def login(request):
      
     pw = login_page.LoginPage()
-    tip = pw.login(request.param[0], request.param[1])
+    tip = pw.Login(request.param[0], request.param[1])
     assert tip == request.param[2]
     return pw.page   
 
